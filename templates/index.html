@@ -1,0 +1,91 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block body %}
+<center class="my-4 mx-5">
+  <form class="col-md-6 col-md-offset-2" method="post" action="">
+    {% csrf_token %}
+    <div class="input-group">
+      <input type="text" class="form-control search" id="search" name="city" placeholder="Search" >
+      <div class="input-group-btn">
+        <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </form>
+</center>
+<div class="my-5 mx-5">
+  {% if data.country_code %}
+  <div class="col-md-6 col-md-offset-3">
+    <h1><img class="imageloc" src="https://static.thenounproject.com/png/2053972-200.png"></img>{{city}}, {{data.country_code}}</h1>
+    <h2>{{data.temp}}</h2>
+    <h3>{{data.desc}}</h3>
+</div>  
+<br>
+    {% comment %} <div class="body">
+    <div class="row"  style="width: 18rem;">
+      <div class="card">
+        <div class="card-body">
+          <h5>longitude: {{data.longitude}}</h5>
+          <h5>latitude: {{data.latitude}}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row"  style="width: 18rem;">
+      <div class="card">
+        <div class="card-body">
+          <h5>pressure: {{data.pressure}} hPa</h5>
+          <h5>humidity: {{data.humidity}}%</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row"  style="width: 18rem;">
+      <div class="card">
+        <div class="card-body">
+          <h5>Visibility:  {{data.visibility}} km</h5>
+          <h5>wind speed: {{data.windspeed}} km/h</h5>
+        </div>
+      </div>
+    </div>
+    </div> {% endcomment %}
+    {% comment %} <h5>longitude: {{data.longitude}}</h5>
+    <h5>latitude: {{data.latitude}}</h5>
+    <h5>pressure: {{data.pressure}} hPa</h5>
+    <h5>humidity: {{data.humidity}}%</h5>
+    <h5>Visibility: {{data.visibility}} km</h5>
+    <h5>wind speed: {{data.windspeed}} km/h</h5> {% endcomment %}
+  
+<div class="float-start mx-3 my-5">
+  <div class="row">
+    <div class="col">
+      <div class="card text-dark bg-light mb-3">
+        <div class="card-body">
+          <h5>Longitude {{data.longitude}}</h5>
+          <h5>Latitude {{data.latitude}}</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col">
+      <div class="card text-dark bg-light mb-3">
+        <div class="card-body">
+          <h5>Pressure {{data.pressure}} hPa</h5>
+          <h5>Humidity {{data.humidity}}%</h5>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col">
+      <div class="card text-dark bg-light mb-3">
+        <div class="card-body">
+          <h5>Visibility  {{data.visibility}} km</h5>
+          <h5>Wind speed {{data.windspeed}} km/h</h5>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+  {% endif %}
+</center>
+{% endblock body %}

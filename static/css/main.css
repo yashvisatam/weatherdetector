@@ -1,0 +1,44 @@
+*{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+.navbar{
+    background-color:gray !important;
+    color: white;
+    width: 100% ;
+}
+.weatherlogo{
+    height: 35px;
+    width: 35px;
+}
+.searchlogo{
+    height: 30px;
+    width: 30px;
+}
+.search{
+    border-radius: 5px !important;
+}
+.search:hover{
+    box-shadow: 3px 3px 5px rgb(138, 137, 137);
+}
+.imageloc{
+    height: 20px;
+    width: 20px;
+}
+.card:hover{
+    box-shadow: 3px 3px 5px rgb(138, 137, 137);
+    background-color: aliceblue;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font: bolder;
+    opacity: 1;
+  transform: scale(1.02);
+}
+.card{
+    width: 17rem;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: all 0.4s;
+}
